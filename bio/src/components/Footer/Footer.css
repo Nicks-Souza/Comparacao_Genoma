@@ -1,0 +1,52 @@
+.footer {
+  background-color: #004d4d;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Garante que o footer ocupa toda a largura */
+}
+
+footer:hover {
+  background-color: #006666;
+}
+  
+  .social-icons {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 20px; /* Espaçamento entre os ícones */
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1); /* Efeito de aumentar o ícone no hover */
+  }
+  
+  .social-icon {
+    width: 30px; /* Tamanho do ícone */
+    height: 30px; /* Tamanho do ícone */
+    filter: invert(100%); /* Deixa os ícones brancos */
+  }
+  
+  .copyright {
+    font-size: 14px;
+    margin-top: 10px; /* Adiciona um espaçamento superior */
+  }
+  
+
+  @media (max-width: 768px) {
+    .footer {
+        padding: 10px 0;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

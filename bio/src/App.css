@@ -1,0 +1,23 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante altura total da viewport */
+}
+
+@media (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+
+  .container, .principal, .sobre {
+      padding: 10px;
+  }
+
+  h1, h2, h3 {
+      font-size: 20px;
+  }
+
+  p, label {
+      font-size: 14px;
+  }
+}

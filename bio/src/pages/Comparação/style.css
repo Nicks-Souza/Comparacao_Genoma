@@ -1,0 +1,308 @@
+.barra {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    height: auto;
+    min-height: 100vh; 
+    background-color: #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px;
+}
+
+.footer{
+    margin-top: auto;
+}
+
+.barra h2 {
+    padding-top: 40px;
+    color: #00796b;
+}
+
+.barra label{
+    color: #00796b;
+    margin-right: 10px;
+}
+
+.nome1{
+    color: rgb(171, 63, 63);
+}
+
+.nome2{
+    color: rgb(239, 180, 124);
+}
+
+.bar-chart {
+    margin-top: 90px; /* Espaçamento superior maior */
+    margin-bottom: 40px; /* Espaçamento inferior maior */
+    justify-content: center;
+    align-items: center;
+}
+
+.barra form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.barra input {
+    width: 300px;
+    height: 35px;
+    font-size: 20px;
+    border: 1px solid rgb(250, 248, 248);
+    border-radius: 4px;
+    background-color: rgb(250, 248, 248);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.barra button {
+    background-color:  #00796b;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    transition: transform 0.3s;
+}
+
+.barra select{
+    width: 250px;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #393c40;
+    background-color: #f8f9fa;
+    font-size: 16px;
+    color: #1b416a;
+    text-align: center;
+}
+
+.barra button:hover {
+    transform: translateY(-3px);
+}
+
+.comparison-results {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.result-section {
+    text-align: center;
+}
+
+.heatmap {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 1px;
+}
+
+.heatmap-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    color: white;
+    border: 1px solid #111;
+}
+
+.comparison-x {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #594b4b; /* Cor para o X */
+    margin: 0 2rem;
+}
+
+.pie-chart {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  .loader{
+    margin-top: 160px;
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 88px;
+  }
+  
+  .wave{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    perspective: 100px;
+  }
+  
+  .wave > div{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+  }
+  
+  .wave > div::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(239, 180, 124);
+    border-radius: 50%;
+  }
+  
+  .top-wave > div::before {
+    background-color: rgb(171, 63, 63);
+  }
+  
+  .top-wave > div{
+    animation: move 3s ease-in-out infinite reverse;
+    
+   }
+   
+  .top-wave > div::before{
+    animation: grow 3s linear infinite reverse; 
+  }
+  
+  .bottom-wave > div{
+    animation: move 3s ease-in-out infinite;
+   }
+   
+  .bottom-wave > div::before{
+    animation: grow 3s linear infinite;
+  }
+  
+  .wave > div:nth-child(10){
+    animation-delay: 0s;
+  }
+  .wave > div:nth-child(9){
+    animation-delay: -0.1s;
+  }
+  .wave > div:nth-child(8){
+    animation-delay: -0.2s;
+  }
+  .wave > div:nth-child(7){
+    animation-delay: -0.3s;
+  }
+  .wave > div:nth-child(6){
+    animation-delay: -0.4s;
+  }
+  .wave > div:nth-child(5){
+    animation-delay: -0.5s;
+  }
+  .wave > div:nth-child(4){
+    animation-delay: -0.6s;
+  }
+  .wave > div:nth-child(3){
+    animation-delay: -0.7s;
+  }
+  .wave > div:nth-child(2){
+    animation-delay: -0.8s;
+  }
+  .wave > div:nth-child(1){
+    animation-delay: -0.9s;
+  }
+  
+  
+  .bottom-wave > div:nth-child(10){
+    animation-delay: 0.75s;
+  }
+  .bottom-wave > div:nth-child(9){
+    animation-delay: 0.65s;
+  }
+  .bottom-wave > div:nth-child(8){
+    animation-delay: 0.55s;
+  }
+  .bottom-wave > div:nth-child(7){
+    animation-delay: 0.45s;
+  }
+  .bottom-wave > div:nth-child(6){
+    animation-delay: 0.35s;
+  }
+  .bottom-wave > div:nth-child(5){
+    animation-delay: 0.25s;
+  }
+  .bottom-wave > div:nth-child(4){
+    animation-delay: 0.15s;
+  }
+  .bottom-wave > div:nth-child(3){
+    animation-delay: 0.05s;
+  }
+  .bottom-wave > div:nth-child(2){
+    animation-delay: -0.05s;
+  }
+  .bottom-wave > div:nth-child(1){
+    animation-delay: -0.15s;
+  }
+  
+  
+  @keyframes move{
+    0%{
+      transform: translateY(0px);
+    }
+    25%{
+      transform: translateY(88px);
+    }
+    50%{
+      transform: translateY(0px);
+    }
+    75%{
+      transform: translateY(88px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  
+  }
+  
+  @keyframes grow{
+    0%, 50%, 75%, 100% {
+      transform: scaleX(0.7) scaleY(0.7);
+    }
+    10%, 60% {
+      transform: scaleX(1) scaleY(1);
+    }
+    35%, 85% {
+      transform: scaleX(0.4) scaleY(0.4);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .barra {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .bar-chart, .heatmap {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta o grid */
+        gap: 5px;
+    }
+
+    .heatmap-cell {
+        width: 50px;
+        height: 50px;
+    }
+
+    .comparison-x {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+}
