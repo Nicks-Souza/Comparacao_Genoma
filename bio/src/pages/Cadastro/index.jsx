@@ -70,7 +70,7 @@ function Cadastro() {
       formData.append('nome', nome);
       formData.append('fastaContentBase64', file);
   
-      const response = await axios.post('http://localhost:8080/api/fasta/upload', formData, {
+      const response = await axios.post('https://bioinfoapi-production.up.railway.app/api/fasta/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -104,7 +104,7 @@ function Cadastro() {
   useEffect(() => {
     const fetchFastaFiles = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/fasta');
+        const response = await axios.get('https://bioinfoapi-production.up.railway.app/api/fasta');
         setFastaFiles(response.data);
       } catch (error) {
         console.error('Erro ao buscar arquivos fasta', error);

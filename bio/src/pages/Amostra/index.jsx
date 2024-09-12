@@ -18,7 +18,7 @@ function Amostra() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/fasta/${id}`)
+    fetch(`https://bioinfoapi-production.up.railway.app/api/fasta/${id}`)
       .then(response => response.json())
       .then(data => setAmostra(data))
       .catch(error => console.error('Erro ao carregar amostra:', error));

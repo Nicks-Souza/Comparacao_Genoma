@@ -16,7 +16,7 @@ function Comparacao() {
   useEffect(() => {
     const fetchFastaFiles = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/fasta');
+        const response = await axios.get('https://bioinfoapi-production.up.railway.app/api/fasta');
         setFastaFiles(response.data);
       } catch (err) {
         console.error("Erro ao buscar arquivos FASTA:", err);
@@ -38,7 +38,7 @@ function Comparacao() {
   
     if (fileId) {
       try {
-        const response = await axios.get(`http://localhost:8080/api/fasta/${fileId}`);
+        const response = await axios.get(`https://bioinfoapi-production.up.railway.app/api/fasta/${fileId}`);
   
         if (response.data && response.data.nome && response.data.fastaContent) {
           setFileContent(response.data.fastaContent);

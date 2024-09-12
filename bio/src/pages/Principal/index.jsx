@@ -7,7 +7,7 @@ function Principal() {
 
   useEffect(() => {
     // Fetch para buscar as amostras do backend
-    fetch('http://localhost:8080/api/fasta')
+    fetch('https://bioinfoapi-production.up.railway.app/api/fasta')
       .then(response => response.json())
       .then(data => setGenomes(data))
       .catch(error => console.error('Erro ao carregar amostras:', error));
